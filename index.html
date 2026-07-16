@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hanuman Jyotish - Digital Prediction Web Application. Spin the wheel and get authentic predictions based on traditional methods.">
+    <meta name="keywords" content="hanuman jyotish, prediction, fortune telling, astrology, wheel spin">
+    <meta name="author" content="Hanuman Jyotish">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hanuman Jyotish - Digital Prediction">
+    <meta property="og:description" content="Get your authentic predictions by spinning the Hanuman Jyotish wheel">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+
+    <title>Hanuman Jyotish - Digital Prediction Web Application</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-b from-white to-gray-50 text-gray-900">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-om text-orange-500 text-2xl"></i>
+                        <span class="font-bold text-xl text-blue-600">Hanuman Jyotish</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-blue-600 font-semibold hover:text-orange-500 transition">Home</a>
+                    <a href="instructions.html" class="text-gray-700 hover:text-orange-500 transition">How to Use</a>
+                    <a href="about.html" class="text-gray-700 hover:text-orange-500 transition">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-orange-500 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="index.html"
+                    class="block py-2 px-4 text-blue-600 font-semibold hover:bg-gray-100 rounded">Home</a>
+                <a href="instructions.html" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded">How to
+                    Use</a>
+                <a href="about.html" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded">About</a>
+                <a href="contact.html" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                <span class="text-blue-600">Hanuman Jyotish</span>
+                <br>
+                <span class="text-orange-500">Digital Predictions</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                Experience the traditional wisdom of Hanuman Jyotish in digital form. Spin the wheel, select your
+                category, and receive authentic predictions.
+            </p>
+            <a href="wheel.html"
+                class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition transform hover:scale-105">
+                <i class="fas fa-play-circle mr-2"></i>Start Prediction
+            </a>
+        </section>
+
+        <!-- Categories Overview Section -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+                Select Your Prediction Category
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gaman Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-blue-500">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Gaman Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to travel and movement.</p>
+                    <a href="wheel.html?category=gaman"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Aagman Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-green-500">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Aagman Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to arrival and return.</p>
+                    <a href="wheel.html?category=aagman"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Krishikarm Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-green-600">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Krishikarm Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to agriculture and farming.</p>
+                    <a href="wheel.html?category=krishikarm"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Vaypar Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-500">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Vaypar Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to business and trade.</p>
+                    <a href="wheel.html?category=vaypar"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Gangaprapti Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-cyan-500">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Gangaprapti Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to holy pilgrimage and Ganga.</p>
+                    <a href="wheel.html?category=gangaprapti"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Mrituchinta Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-red-500">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Mrituchinta Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to life and death concerns.</p>
+                    <a href="wheel.html?category=mrituchinta"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Devesta Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-yellow-500">
+                        <i class="fas fa-place-of-worship"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Devesta Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to deity worship and devotion.</p>
+                    <a href="wheel.html?category=devesta"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Sahayeta Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-emerald-500">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Sahayeta Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to help and support.</p>
+                    <a href="wheel.html?category=sahayeta"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Vasnirupan Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-orange-500">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Vasnirupan Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to residence and location.</p>
+                    <a href="wheel.html?category=vasnirupan"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Mantra Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-500">
+                        <i class="fas fa-om"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Mantra Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to mantra and spiritual practice.</p>
+                    <a href="wheel.html?category=mantra"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <!-- Dhanchinta Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-yellow-500">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Dhanchinta Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to wealth and financial concerns.</p>
+                    <a href="wheel.html?category=dhanchinta"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Manskaama Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-pink-500">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Manskaama Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to wishes and desires.</p>
+                    <a href="wheel.html?category=manskaama"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Rog Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-red-500">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Rog Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to diseases and health.</p>
+                    <a href="wheel.html?category=rog"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Dhanagaman Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-green-500">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Dhanagaman Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to incoming wealth.</p>
+                    <a href="wheel.html?category=dhanagaman"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Vad Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-500">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Vad Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to arguments and discussions.</p>
+                    <a href="wheel.html?category=vad"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Vibad Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-orange-500">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Vibad Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to disputes and conflicts.</p>
+                    <a href="wheel.html?category=vibad"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Sang Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-blue-500">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Sang Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to company and association.</p>
+                    <a href="wheel.html?category=sang"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Yudh Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-red-600">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Yudh Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to battles and competition.</p>
+                    <a href="wheel.html?category=yudh"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Milan Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-emerald-500">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Milan Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to meetings and reunions.</p>
+                    <a href="wheel.html?category=milan"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Yachana Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-violet-500">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Yachana Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to requests and prayers.</p>
+                    <a href="wheel.html?category=yachana"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <!-- Swasthan Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-blue-500">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Swasthan Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to place and residence.</p>
+                    <a href="wheel.html?category=swasthan"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Nashtdravya Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-red-500">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Nashtdravya Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to lost property and valuables.</p>
+                    <a href="wheel.html?category=nashtdravya"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Prapti Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-green-500">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Prapti Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to gain and achievement.</p>
+                    <a href="wheel.html?category=prapti"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Gud Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-500">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Gud Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to hidden and secret matters.</p>
+                    <a href="wheel.html?category=gud"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Grahak Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-500">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Grahak Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to customers and clients.</p>
+                    <a href="wheel.html?category=grahak"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Kharidbhiti Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-orange-500">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Kharidbhiti Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to buying and purchasing.</p>
+                    <a href="wheel.html?category=kharidbhiti"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Garv Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-yellow-500">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Garv Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to honor and pride.</p>
+                    <a href="wheel.html?category=garv"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Chinta Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-pink-500">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Chinta Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to worries and thoughts.</p>
+                    <a href="wheel.html?category=chinta"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Bandhan Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-red-600">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Bandhan Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to bondage and restrictions.</p>
+                    <a href="wheel.html?category=bandhan"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Viswash Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-emerald-500">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Viswash Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to trust and faith.</p>
+                    <a href="wheel.html?category=viswash"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <!-- Vidya Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-500">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Vidya Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to education and knowledge.</p>
+                    <a href="wheel.html?category=vidya"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Dut Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-cyan-500">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Dut Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to messengers and communications.</p>
+                    <a href="wheel.html?category=dut"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Sambandh Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-pink-500">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Sambandh Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to relationships and connections.</p>
+                    <a href="wheel.html?category=sambandh"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Rajya Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-yellow-500">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Rajya Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to government and authority.</p>
+                    <a href="wheel.html?category=rajya"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Santan Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-green-500">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Santan Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to children and family.</p>
+                    <a href="wheel.html?category=santan"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Sanchya Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-orange-500">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Sanchya Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to savings and accumulation.</p>
+                    <a href="wheel.html?category=sanchya"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Vibah Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-red-500">
+                        <i class="fas fa-rings-wedding"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Vibah Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to marriage and married life.</p>
+                    <a href="wheel.html?category=vibah"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Bikrya Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-500">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Bikrya Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to selling and commerce.</p>
+                    <a href="wheel.html?category=bikrya"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Pranaya Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-pink-600">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Pranaya Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to love and affection.</p>
+                    <a href="wheel.html?category=pranaya"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Kushal Parikxa -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-emerald-500">
+                        <i class="fas fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Kushal Parikxa</h3>
+                    <p class="text-gray-600 mb-4">Predictions related to well-being and overall success.</p>
+                    <a href="wheel.html?category=kushal"
+                        class="text-blue-600 font-semibold hover:text-orange-500 transition">
+                        Spin the Wheel <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-12 mb-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Why Choose Hanuman Jyotish?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-6xl mb-4 text-blue-600">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Interactive Wheel</h3>
+                    <p class="text-gray-600">Smooth spinning animation with random selection for authentic predictions.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-6xl mb-4 text-orange-500">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Mobile Friendly</h3>
+                    <p class="text-gray-600">Works perfectly on all devices - desktop, tablet, and mobile phones.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-6xl mb-4 text-red-600">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Traditional Wisdom</h3>
+                    <p class="text-gray-600">Based on authentic Hanuman Jyotish methods and traditional knowledge.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center bg-blue-600 text-white rounded-2xl p-12">
+            <h2 class="text-4xl font-bold mb-4">Ready to Discover Your Future?</h2>
+            <p class="text-xl mb-8 opacity-90">Spin the Hanuman Jyotish wheel and receive your personalized prediction
+            </p>
+            <a href="wheel.html"
+                class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105">
+                <i class="fas fa-play-circle mr-2"></i>Start Now
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span class="text-orange-500"><i class="fas fa-om mr-2"></i>Hanuman Jyotish</span>
+                    </h3>
+                    <p class="text-gray-400">Digital predictions based on traditional Hanuman Jyotish methods.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="instructions.html" class="hover:text-white transition">Instructions</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition">Disclaimer</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Hanuman Jyotish. All rights reserved. | Designed with <span
+                        class="text-red-500">❤️</span> for traditional wisdom</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

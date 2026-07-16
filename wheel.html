@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hanuman Jyotish Prediction Wheel - Spin and get your prediction">
+    <title>Prediction Wheel - Hanuman Jyotish</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-b from-white to-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-om text-orange-500 text-2xl"></i>
+                    <span class="font-bold text-xl text-blue-600">Hanuman Jyotish</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-orange-500 transition">Home</a>
+                    <a href="instructions.html" class="text-gray-700 hover:text-orange-500 transition">How to Use</a>
+                    <a href="about.html" class="text-gray-700 hover:text-orange-500 transition">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Category Selector -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Select Your Prediction Category</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+
+                <button
+                    class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    data-category="gaman">
+                    <i class="fas fa-route mr-2"></i>Gaman
+                </button>
+
+                <button
+                    class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    data-category="aagman">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Aagman
+                </button>
+
+                <button
+                    class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    data-category="krishikarm">
+                    <i class="fas fa-seedling mr-2"></i>Krishikarm
+                </button>
+
+                <button
+                    class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    data-category="vaypar">
+                    <i class="fas fa-briefcase mr-2"></i>Vaypar
+                </button>
+
+                <button
+                    class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105"
+                    data-category="gangaprapti">
+                    <i class="fas fa-water mr-2"></i>Gangaprapti
+                </button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="mrituchinta"><i
+                        class="fas fa-skull mr-2"></i>Mrituchinta</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="devesta"><i
+                        class="fas fa-place-of-worship mr-2"></i>Devesta</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="sahayeta"><i
+                        class="fas fa-hands-helping mr-2"></i>Sahayeta</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="vasnirupan"><i
+                        class="fas fa-home mr-2"></i>Vasnirupan</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="mantra"><i class="fas fa-om mr-2"></i>Mantra</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="dhanchinta"><i
+                        class="fas fa-coins mr-2"></i>Dhanchinta</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="manskaama"><i
+                        class="fas fa-star mr-2"></i>Manskaama</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="rog"><i class="fas fa-heartbeat mr-2"></i>Rog</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="dhanagaman"><i
+                        class="fas fa-money-bill-wave mr-2"></i>Dhanagaman</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="vad"><i class="fas fa-comments mr-2"></i>Vad</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="vibad"><i class="fas fa-gavel mr-2"></i>Vibad</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="sang"><i class="fas fa-users mr-2"></i>Sang</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="yudh"><i class="fas fa-shield-alt mr-2"></i>Yudh</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="milan"><i class="fas fa-handshake mr-2"></i>Milan</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="yachana"><i
+                        class="fas fa-praying-hands mr-2"></i>Yachana</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="swasthan"><i
+                        class="fas fa-map-marker-alt mr-2"></i>Swasthan</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="nashtdravya"><i
+                        class="fas fa-box-open mr-2"></i>Nashtdravya</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="prapti"><i class="fas fa-gift mr-2"></i>Prapti</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="gud"><i class="fas fa-lock mr-2"></i>Gud</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="grahak"><i
+                        class="fas fa-user-friends mr-2"></i>Grahak</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="kharidbhiti"><i
+                        class="fas fa-shopping-cart mr-2"></i>Kharidbhiti</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="garv"><i class="fas fa-crown mr-2"></i>Garv</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="chinta"><i class="fas fa-brain mr-2"></i>Chinta</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="bandhan"><i class="fas fa-link mr-2"></i>Bandhan</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="viswash"><i
+                        class="fas fa-handshake mr-2"></i>Viswash</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="vidya"><i class="fas fa-book mr-2"></i>Vidya</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="dut"><i class="fas fa-envelope mr-2"></i>Dut</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="sambandh"><i
+                        class="fas fa-people-arrows mr-2"></i>Sambandh</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="rajya"><i class="fas fa-landmark mr-2"></i>Rajya</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="santan"><i class="fas fa-baby mr-2"></i>Santan</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="sanchya"><i class="fas fa-archive mr-2"></i>Sanchya</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="vibah"><i class="fas fa-ring mr-2"></i>Vibah</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="bikrya"><i class="fas fa-store mr-2"></i>Bikrya</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="pranaya"><i class="fas fa-heart mr-2"></i>Pranaya</button>
+
+                <button class="category-btn bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-900 py-3 px-4 rounded-lg font-semibold transition transform hover:scale-105" data-category="kushal"><i
+                        class="fas fa-check-circle mr-2"></i>Kushal</button>
+
+            </div>
+        </div>
+
+        <!-- Wheel Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <!-- Wheel Canvas -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-xl p-8 flex justify-center items-center">
+                <div class="relative w-full max-w-md aspect-square">
+                    <!-- Pointer -->
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 z-20">
+                        <div
+                            class="w-0 h-0 border-l-8 border-r-8 border-t-12 border-l-transparent border-r-transparent border-t-red-600">
+                        </div>
+                    </div>
+
+                    <!-- Canvas for Wheel -->
+                    <canvas id="wheelCanvas" class="w-full h-full" width="500" height="500"></canvas>
+
+                    <!-- Center Circle with Button -->
+                    <button id="spinBtn"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition z-10 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold">SPIN</div>
+                            <div class="text-xs opacity-75">Click Me</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="space-y-4">
+                <!-- Current Category Info -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Current Category</h3>
+                    <div id="categoryInfo" class="text-center">
+                        <div class="text-5xl mb-4 text-blue-500">
+                            <i class="fas fa-circle-notch"></i>
+                        </div>
+                        <p class="text-gray-600">Select a category to begin</p>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+                    <h3 class="text-lg font-bold mb-3 text-blue-900">How to Use</h3>
+                    <ol class="text-sm text-blue-800 space-y-2">
+                        <li><strong>1.</strong> Select a category above</li>
+                        <li><strong>2.</strong> Click the SPIN button</li>
+                        <li><strong>3.</strong> Wait for the wheel to stop</li>
+                        <li><strong>4.</strong> See your prediction</li>
+                    </ol>
+                </div>
+
+                <!-- Share & More -->
+                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                    <h3 class="text-lg font-bold mb-3 text-orange-900">Share Result</h3>
+                    <div class="flex space-x-2">
+                        <button
+                            class="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition text-sm font-bold">
+                            <i class="fab fa-facebook mr-1"></i>Share
+                        </button>
+                        <button
+                            class="flex-1 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition text-sm font-bold">
+                            <i class="fab fa-whatsapp mr-1"></i>Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Section (Hidden by Default) -->
+        <div id="resultSection" class="hidden bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl shadow-xl p-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Result Content -->
+                <div id="resultContent" class="space-y-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Your Prediction</h2>
+                    <div id="selectedName" class="text-3xl font-bold text-blue-600 mb-4"></div>
+                    <div id="predictionText" class="text-lg text-gray-700 leading-relaxed mb-4"></div>
+                    <div id="predictionDetails" class="grid grid-cols-2 gap-4"></div>
+                </div>
+
+                <!-- Result Visual -->
+                <div id="resultVisual" class="text-center p-8 rounded-lg bg-white shadow-md">
+                    <div id="resultIcon" class="text-8xl mb-4"></div>
+                    <div id="resultMessage" class="text-2xl font-bold mb-4"></div>
+                    <div class="flex justify-center gap-4 flex-wrap">
+                        <button id="spinAgainBtn"
+                            class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">
+                            <i class="fas fa-redo mr-2"></i>Spin Again
+                        </button>
+                        <button id="shareResultBtn"
+                            class="bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition">
+                            <i class="fas fa-share-alt mr-2"></i>Share
+                        </button>
+                        <a href="index.html"
+                            class="bg-gray-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-gray-700 transition">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 Hanuman Jyotish. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
